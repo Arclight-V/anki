@@ -3,12 +3,13 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/atselvan/ankiconnect"
-	"github.com/serope/laroussefr/conjugation"
 	"log"
 	"os"
 	"regexp"
 	"strings"
+
+	"github.com/Arclight-V/laroussefr/conjugation"
+	"github.com/atselvan/ankiconnect"
 )
 
 const (
