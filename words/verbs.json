@@ -14,7 +14,17 @@
       {
         "name": "French::Interactions 1::Unité 1::Leçon 2 Présentations::Vocabulaire",
         "words": [
-          "classer"
+          "nom", "Prénom", "Nationalité", "Adresse", "Profession", "homme", "femme", "fiche", "inscription"
+        ]
+      }
+    ]
+  },
+  "phrases": {
+    "decks": [
+      {
+        "name": "French::Interactions 1::Unité 1::Leçon 2 Présentations::Phrases / Expressions",
+        "words": [
+          "Quelle est sa nationalité?", "Elle habite où?", "Elle parle quelles langues?", "Qu'est-ce qu'elle fait dans la vie"
         ]
       }
     ]
