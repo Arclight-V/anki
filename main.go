@@ -21,10 +21,12 @@ import (
 )
 
 const (
-	defenition          = "French Defenition"
-	defenitiodAndRevers = "Basic (and reversed card (Word/Transcription/PartOfSpeach/Audio)"
-	indicatifPresent    = "French Conjugation: INDICATIF Présent"
-	imperatifPresent    = "French Conjugation: IMPÉRATIF Présent"
+	basicTypeInAnswer      = "Basic (type in the answer)"
+	basicAndReversedFrench = "Basic (and reversed card french)"
+	defenition             = "French Defenition"
+	defenitiodAndRevers    = "Basic (and reversed card (Word/Transcription/PartOfSpeach/Audio)"
+	indicatifPresent       = "French Conjugation: INDICATIF Présent"
+	imperatifPresent       = "French Conjugation: IMPÉRATIF Présent"
 )
 
 var re = regexp.MustCompile(`^(j'|je|tu|il, elle|nous|vous|ils, elles)\s*`)
@@ -32,6 +34,7 @@ var re = regexp.MustCompile(`^(j'|je|tu|il, elle|nous|vous|ils, elles)\s*`)
 type File struct {
 	Verbs      DecksContainer `json:"verbs"`
 	Definition DecksContainer `json:"definition"`
+	Phrases    DecksContainer `json:"phrases"`
 }
 
 type DecksContainer struct {
@@ -84,6 +87,45 @@ func main() {
 
 	client := ankiconnect.NewClient()
 
+	for _, deck := range decks.Phrases.Decks {
+		name := deck.Name
+
+		for _, phrase := range deck.Words {
+			{
+				note := ankiconnect.Note{
+					DeckName:  name,
+					ModelName: basicTypeInAnswer,
+					Fields: ankiconnect.Fields{
+						// "Front":   phrase, -To avoid duplicates, the translation must be manually entered into the anki.
+						"Front": phrase,
+						"Back":  phrase,
+					},
+				}
+				restErr := client.Notes.Add(note)
+				if restErr != nil {
+					log.Println(restErr, basicTypeInAnswer)
+				}
+			}
+
+			{
+				note := ankiconnect.Note{
+					DeckName:  name,
+					ModelName: basicAndReversedFrench,
+					Fields: ankiconnect.Fields{
+						// "Rubric":   phrase, -To avoid duplicates, the translation must be manually entered into the anki.
+						"Front": phrase,
+						"Back":  phrase,
+					},
+				}
+				restErr := client.Notes.Add(note)
+				if restErr != nil {
+					log.Println(restErr, basicAndReversedFrench)
+				}
+			}
+
+		}
+	}
+
 	for _, deck := range decks.Definition.Decks {
 		name := deck.Name
 
@@ -106,7 +148,7 @@ func main() {
 
 					_, errAnki := client.Media.StoreMediaFile(filename, base64.StdEncoding.EncodeToString(data))
 					if errAnki != nil {
-						log.Fatalf("store error: %v", errAnki)
+						log.Printf("store error: %v", errAnki)
 					}
 					log.Printf("stored media: %s", filename)
 				}
