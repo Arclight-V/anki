@@ -1,5 +1,11 @@
-github.com/Arclight-V/laroussefr v0.0.0-20251004112204-af4f69b74af5 h1:xC8BVTbc2VK6ippXVf1YryZpCjJtj0KeZ80juVR0SSM=
-github.com/Arclight-V/laroussefr v0.0.0-20251004112204-af4f69b74af5/go.mod h1:v1NKmd8aDfDEq1oDbpbOLxq0qFbSXN2u3CVe0iz5Fn8=
+github.com/Arclight-V/laroussefr v0.1.0 h1:hs3zJYJnOY4WKZdeIt6n6g5oa2MznWi2r4yDCHo6boM=
+github.com/Arclight-V/laroussefr v0.1.0/go.mod h1:oSBLiVQkPpY8eseO59YCsidkfX5GNMKTcVsivWYjeoc=
+github.com/Arclight-V/laroussefr v0.1.1 h1:lsl7ozxpvODpcTdqYsrcsAgPzfz1IvAoPqsnbgBouow=
+github.com/Arclight-V/laroussefr v0.1.1/go.mod h1:oSBLiVQkPpY8eseO59YCsidkfX5GNMKTcVsivWYjeoc=
+github.com/Arclight-V/laroussefr v0.1.2 h1:WGEy9pNyUSNkKqHnPbq/BeUiF9RFGhDF+2rDUg5vQvo=
+github.com/Arclight-V/laroussefr v0.1.2/go.mod h1:oSBLiVQkPpY8eseO59YCsidkfX5GNMKTcVsivWYjeoc=
+github.com/Arclight-V/laroussefr v0.1.3 h1:RKahD6yZsUIsz5Fw5sdsAILsyBElYINm6PJnytCXcBY=
+github.com/Arclight-V/laroussefr v0.1.3/go.mod h1:u5Kjv7NvgccdGTR0/xhRgPkptfD7xbALIShW0sUBF3g=
 github.com/atselvan/ankiconnect v1.1.1 h1:F51SdnvANNEy3lmf7Gwz1EauSe9tHO1MVO9OmoNO+Zw=
 github.com/atselvan/ankiconnect v1.1.1/go.mod h1:T79wbPv2BRMWhWNSii6+4dwFzkDIdKAwtrmQ6qvABBw=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=

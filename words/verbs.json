@@ -1,11 +1,22 @@
 {
-  "decks": [
-    {
-      "name": "French::Interactions 1::Unité 1::Leçon 2 Présentations::Conjugation",
-      "words": [
-        "étre", "travailler", "écouter", "prononcer", "souligner", "répondre", "écrire", "faire", "lire",
-        "écrire"
+  "verbs": {
+      "decks": [
+        {
+          "name": "French::Interactions 1::Unité 1::Leçon 2 Présentations::Conjugation",
+          "words": [
+            "classer"
+          ]
+        }
       ]
-    }
-  ]
+  },
+  "definition": {
+    "decks": [
+      {
+        "name": "French::Interactions 1::Unité 1::Leçon 2 Présentations::Vocabulaire",
+        "words": [
+          "classer"
+        ]
+      }
+    ]
+  }
 }
